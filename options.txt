@@ -1,0 +1,1 @@
+{"_":[],"target":"browser","name":"@busyzz/react-wx-image-grid","format":"esm","input":"/Users/busyzz/Documents/own-package/react-image-grid/src/index.tsx","writeMeta":false}

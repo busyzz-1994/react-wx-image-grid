@@ -1,0 +1,80 @@
+{
+  "version": "1.1.2",
+  "name": "@busyzz/react-wx-image-grid",
+  "description": "react-wx-image-grid React component",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "author": "busyzz",
+  "module": "dist/react-wx-image-grid.esm.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "predeploy": "npm run build && cd example && npm run build -- --public-url https://busyzz-1994.github.io/react-wx-image-grid",
+    "deploy": "gh-pages -d example/dist"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "size-limit": [
+    {
+      "path": "dist/react-image-grid.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/react-image-grid.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^5.0.4",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "autoprefixer": "^10.3.6",
+    "cssnano": "^5.0.8",
+    "gh-pages": "^3.2.3",
+    "husky": "^7.0.2",
+    "node-sass": "^6.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup-plugin-postcss": "^4.0.1",
+    "size-limit": "^5.0.4",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.3"
+  },
+  "keywords": [
+    "react-component",
+    "react-image",
+    "preview",
+    "image"
+  ],
+  "homepage": "git@github.com:busyzz-1994/react-wx-image-grid.git",
+  "repository": "git@github.com:busyzz-1994/react-wx-image-grid.git",
+  "dependencies": {
+    "react-wx-images-viewer": "^1.0.6"
+  }
+}

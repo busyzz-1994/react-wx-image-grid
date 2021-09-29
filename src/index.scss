@@ -1,0 +1,50 @@
+.react-wx-image-grid {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  user-select: none;
+  > .react-wx-image-grid-item {
+    position: relative;
+    // 一张
+    &:only-child {
+      width: 100%;
+    }
+    // 两张
+    &:first-child:nth-last-child(2),
+    &:nth-child(2):last-child {
+      width: 49%;
+    }
+    // 三张
+    &:first-child:nth-last-child(3),
+    &:nth-child(2):nth-last-child(2),
+    &:nth-child(3):last-child {
+      width: 32.5%;
+    }
+    // 四张
+    &:first-child:nth-last-child(4),
+    &:first-child:nth-last-child(4) ~ .react-wx-image-grid-item {
+      width: 49%;
+      margin-bottom: 2%;
+    }
+    // 五张以上
+    &:first-child:nth-last-child(n + 5),
+    &:first-child:nth-last-child(n + 5) ~ .react-wx-image-grid-item {
+      width: 32.5%;
+      margin-bottom: 1.25%;
+    }
+    &::after {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+    > img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}
