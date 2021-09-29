@@ -22,8 +22,6 @@ const App = () => {
         <img src={images} alt="" />
         <img src={images} alt="" />
         <img src={images} alt="" />
-        <img src={images} alt="" />
-        <img src={images} alt="" />
       </Thing>
     </div>
   );
